@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Twitter AdBlock Settings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10px;
+            background-color: #f4f4f4;
+            color: #333;
+            width: 300px; 
+        }
+        .setting {
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        label, button, input {
+            margin-top: 5px;
+        }
+        button {
+            cursor: pointer;
+            padding: 5px 10px;
+            background-color: #162de1;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Twitter AdBlock Settings</h1>
+    <div class="setting">
+        <input type="radio" id="hide" name="adAction" value="hide" checked>
+        <label for="hide">Hide Ads</label>
+    </div>
+    <div class="setting">
+        <input type="radio" id="highlight" name="adAction" value="highlight">
+        <label for="highlight">Highlight Ads</label>
+    </div>
+    <div class="setting">
+        <label for="highlightColor">Highlight Color:</label>
+        <input type="color" id="highlightColor" name="highlightColor" value="#ff0000">
+    </div>
+    <button id="save">Save Settings</button>
+    <div id="message"></div>
+    <div class="setting">
+        Total blocks: <span id="adBlockCount">0</span></div>
+    </div>
+    <dialog id="successDialog">
+        <p>Settings have been saved successfully. Refresh the page for the changes to take effect.</p>
+        <button id="closeDialog">OK</button>
+    </dialog>
+
+    <div class="setting">
+        <a href="https://etherscan.io/address/0x0F5364145EaFE36c7019CD731f12AF0497Eb7F50" target="_blank">
+            <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 40px;"/>
+        </a>
+    </div>
+
+    <div class="setting">
+        <h2>Open Source Code</h2>
+        <a href="https://github.com/coderwithgpt/twitter-adblock" target="_blank">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" style="height: 50px;"/>
+        </a>
+    </div>
+    <script src="settings.js"></script>
+</body>
+</html>
